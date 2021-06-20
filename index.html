@@ -6,13 +6,39 @@
         <title>Japanese text converter</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style type="text/css" media="all">
-
+     
+     .container{
+         width:70%;
+         height:200px;
+         position: fixed;
+         left:50%;
+         margin-top: 50px;
+         background-image:linear-gradient(to bottom right, #0210cf,#cf95ff) ;
+         border-radius: 17%;
+         padding: 30px;
+         transform:translateX(-50%);
+     }
+     input{
+         color:white;
+    font-size: 17px;
+    background-color:#00000000;
+    display: block;
+    margin:auto;
+    border:solid #000000;
+    outline: none;
+    border-width: 0px 0px 2px 0px;
+         
+     }
+     p{
+         color:#c9f5d1;
+     }
     </style>
     </head>
     <body>
-     <input type="text" name="english" id="english" value="" placeholder="Enter your name in English" />
+    <div class="container">
+     <input type="text" name="english" id="english" value="" placeholder="Enter your text in English here" />
      <p id="result">Here your result will be displayed.</p>
-     
+     </div>
     </body>
     <script type="text/javascript" charset="utf-8">
     dict = {'A': 'Ka', 'B': 'tu', 'C': 'mi', 'D': 'te', 'E': 'ku', 'F': 'lu', 'G': 'ji', 'H': 'ri', 'I': 'ki', 'J': 'zu', 'K': 'me', 'L': 'ta', 'M': 'rin', 'N': 'to', 'O': 'mo', 'P': 'no', 'Q': 'ke', 'R': 'shi', 'S': 'ari', 'T': 'chi', 'U': 'do', 'V': 'ru', 'W': 'mei', 'X': 'na', 'Y': 'fu', 'Z': 'zi'};
