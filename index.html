@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Japanese text converter</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css" media="all">
+
+    </style>
+    </head>
+    <body>
+     <input type="text" name="english" id="english" value="" placeholder="Enter your name in English" />
+     <p id="result">Here your result will be displayed.</p>
+     
+    </body>
+    <script type="text/javascript" charset="utf-8">
+    dict = {'A': 'Ka', 'B': 'tu', 'C': 'mi', 'D': 'te', 'E': 'ku', 'F': 'lu', 'G': 'ji', 'H': 'ri', 'I': 'ki', 'J': 'zu', 'K': 'me', 'L': 'ta', 'M': 'rin', 'N': 'to', 'O': 'mo', 'P': 'no', 'Q': 'ke', 'R': 'shi', 'S': 'ari', 'T': 'chi', 'U': 'do', 'V': 'ru', 'W': 'mei', 'X': 'na', 'Y': 'fu', 'Z': 'zi'};
+        $("#english").on("change paste keyup",
+        function(){
+         result="";
+          eng = $("#english").val().toUpperCase();
+          for(i in eng){
+ 
+             if (eng[i] in dict){
+                 result+=dict[eng[i]];
+             }else{
+                 result+=eng[i];
+            
+        }
+         $("#result").html(result);
+        }
+        });
+    </script>
+</html>
